@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.0"]
+
+[project]
+name = "memdem"
+description = "Make use of open global elevation data from https://registry.opendata.aws/terrain-tiles to create dynamic in-memory digital elevation models."
+readme = "README.md"
+requires-python = ">=3.6"
+keywords = ["geospatial", "gis"]
+license = {file = "LICENSE.txt"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: GIS",
+    "Topic :: Software Development :: Libraries",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9"
+]
+authors  = [
+    {email = "yanns.tremblay@gmail.com"}
+]
+maintainers = [
+    {name = "Yann-Sebastien Tremblay-Johnston", email = "yanns.tremblay@gmail.com"}
+]
+dependencies = [
+    "rasterio[s3]",
+    "morecantile"
+]
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "setuptools_scm",
+    "isort",
+    "black",
+    "mypy"
+]
+
+[project.urls]
+homepage = "https://github.com/underchemist/memdem"
+repository = "https://github.com/underchemist/memdem"
+changelog = "https://github.com/underchemist/memdem/blob/main/CHANGELOG.md"
+
+[tool.isort]
+profile = "black"
+known_first_party = "memdem"
+known_third_party = [
+    "rasterio",
+    "morecantile"
+]
+
+[tool.pydocstyle]
+convention = "numpy"
+match_dir = "memdem"
+
+[tool.setuptools_scm]
+
