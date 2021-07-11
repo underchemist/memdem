@@ -20,13 +20,15 @@ def test_dem():
     assert dem.shape == (512, 512)
     assert len(dem.tileset) == 1
     assert list(dem.bounds) == pytest.approx(extent)
-    assert dem.transform == Affine(
-        78271.51696402031,
-        0.0,
-        -20037508.3427892,
-        0.0,
-        -78271.51696402031,
-        20037508.3427892,
+    assert dem.transform == pytest.approx(
+        Affine(
+            78271.51696402031,
+            0.0,
+            -20037508.3427892,
+            0.0,
+            -78271.51696402031,
+            20037508.3427892,
+        )
     )
     assert dem.offsets == [(0, 0, 512, 512)]
 
