@@ -1,5 +1,9 @@
 # MEMDEM
 
+![build](https://github.com/underchemist/memdem/actions/workflows/ci.yaml/badge.svg)
+[![PyPI version](https://badge.fury.io/py/memdem.svg)](https://badge.fury.io/py/memdem)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Make use of open global elevation data from [Terrain Tiles](https://registry.opendata.aws/terrain-tiles) to create digital elevation models (DEM) on the fly.
 
 The memdem project credits the [data source providers](ATTRIBUTION.md). Any use of memdem for redistribution, resale, presentation or publication of the data available from the Terrain Tiles dataset is required to make a similar attribution. See [here](https://github.com/tilezen/joerd/blob/master/docs/attribution.md) for more information.

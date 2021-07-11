@@ -1,4 +1,4 @@
-name: memdem ci
+name: ci
 
 on: [push]
 

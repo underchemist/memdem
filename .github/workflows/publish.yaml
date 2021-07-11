@@ -1,4 +1,4 @@
-name: memdem pypi
+name: publish
 
 on:
   release:
