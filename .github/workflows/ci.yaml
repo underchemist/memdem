@@ -1,6 +1,12 @@
 name: ci
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - "*"
+  pull_request:
 
 jobs:
   build:
@@ -24,4 +30,11 @@ jobs:
           mypy -p memdem --ignore-missing-imports
       - name: Test with pytest
         run: |
-          pytest --cov=memdem --cov-report term-missing tests
+          pytest --cov=memdem --cov-report term-missing --cov-report xml tests
+      - name: Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          file: ./coverage.xml
+          flags: unittests
+          name: memdem-${{ matrix.python-version }}
+          fail_ci_if_error: false

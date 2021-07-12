@@ -5,4 +5,5 @@ setuptools_scm
 pytest
 pytest-cov
 pydocstyle
+codecov
 mypy==0.910
