@@ -1,6 +1,7 @@
 # MEMDEM
 
 ![build](https://github.com/underchemist/memdem/actions/workflows/ci.yaml/badge.svg)
+[![codecov](https://codecov.io/gh/underchemist/memdem/branch/main/graph/badge.svg?token=U2WUJUDDUS)](https://codecov.io/gh/underchemist/memdem)
 [![PyPI version](https://badge.fury.io/py/memdem.svg)](https://badge.fury.io/py/memdem)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
